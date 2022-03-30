@@ -1,7 +1,7 @@
 export default {
   data () {
     return {
-      pointer: 0,
+      pointer: -1,
       pointerDirty: false
     }
   },
