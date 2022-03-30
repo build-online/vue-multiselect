@@ -480,9 +480,9 @@ export default {
     getOptionLabel (option) {
       if (isEmpty(option)) return ''
       /* istanbul ignore else */
-      if (option && option.isTag) return option.label
+      if (option.isTag) return option.label
       /* istanbul ignore else */
-      if (option && option.$isLabel) return option.$groupLabel
+      if (option.$isLabel) return option.$groupLabel
 
       let label = this.customLabel(option, this.label)
       /* istanbul ignore else */
@@ -649,9 +649,9 @@ export default {
 
       this.adjustPosition()
       /* istanbul ignore else  */
-      // if (this.groupValues && this.pointer === 0 && this.filteredOptions.length) {
-      //   this.pointer = 1
-      // }
+      if (this.groupValues && this.pointer === 0 && this.filteredOptions.length) {
+        this.pointer = 1
+      }
 
       this.isOpen = true
       /* istanbul ignore else  */
